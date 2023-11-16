@@ -1,0 +1,47 @@
+{
+  "name": "firelancer-server",
+  "version": "1.0.0",
+  "description": "firelancer backend application.",
+  "main": "main.js",
+  "_moduleAliases": {
+    "@": "dist"
+  },
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/main.js",
+    "migrate": "drizzle-kit generate:pg"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.9.0",
+    "@types/pg": "^8.10.9",
+    "drizzle-kit": "^0.19.13",
+    "pino-pretty": "^10.2.3",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.1.0",
+    "@fastify/jwt": "^7.2.2",
+    "@fastify/swagger": "^8.12.0",
+    "@fastify/swagger-ui": "^1.10.1",
+    "argon2": "^0.31.2",
+    "async-cache-dedupe": "^2.0.0",
+    "drizzle-orm": "^0.28.6",
+    "fastify": "^4.24.3",
+    "fastify-guard": "^2.0.0",
+    "fastify-plugin": "^4.5.1",
+    "fastify-zod": "^1.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "pg": "^8.11.3",
+    "pino": "^8.16.1",
+    "swagger-themes": "^1.2.30",
+    "zennv": "^0.1.1",
+    "zod": "^3.22.4"
+  }
+}
