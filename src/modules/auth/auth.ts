@@ -3,7 +3,7 @@ import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import { findTeamMember } from "@/modules/teams/members/members.services";
 import fastifyGuard from "fastify-guard";
 
-async function firelancerAuth(fastify: FastifyInstance) {
+export default fp(async function (fastify: FastifyInstance) {
   fastify.decorateRequest("member", null);
 
   // USER AUTHENTICATE
@@ -44,9 +44,7 @@ async function firelancerAuth(fastify: FastifyInstance) {
       throw new Error("You are not authorized to perform this action");
     },
   });
-}
-
-export default fp(firelancerAuth);
+});
 
 // DECLARATIONS
 declare module "fastify" {

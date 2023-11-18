@@ -9,7 +9,7 @@ import { logger } from "@/utils/logger";
 import { env } from "@/config/env";
 import { usersRoutes } from "@/modules/users/users.routes";
 import { teamsRoutes } from "@/modules/teams/teams.routes";
-import firelancerAuth from "@/modules/auth/firelancerAuth";
+import firelancerAuth from "@/modules/auth/auth";
 
 export async function buildServer() {
   const app = fastify({
